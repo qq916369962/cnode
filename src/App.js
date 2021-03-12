@@ -1,8 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import IndexRouter from './router';
 
 function App() {
-  return (<h1>hello React！</h1>);
+  return <IndexRouter/>
 }
 
 export default App;
