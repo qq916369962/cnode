@@ -1,0 +1,33 @@
+@import '~antd/dist/antd.css';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#logo{
+    text-align: center;
+    background-color: aliceblue;
+}
+/* html,body,#root{
+    min-height: 100%;
+} */
+.pageLayout{
+    min-height: 100vh;
+    display: flex;
+}
+.pageLayout>.container{
+    flex: 1;
+}
+.main{
+    background-color: #fff;
+}
