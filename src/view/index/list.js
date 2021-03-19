@@ -23,6 +23,7 @@ export default function IndexList() {
     }, [page, tab]);
     return <Fragment>
         <List
+            className='list'
             loading={loading}
             dataSource={data}
             renderItem={item => {
@@ -33,11 +34,7 @@ export default function IndexList() {
                 //         description="Ant Design, a design language for background applications, is refined by Ant UED Team"
                 //     />
                 // </List.Item>
-                return <List.Item
-                    style={{
-                        margin: '0 20px'
-                    }}
-                >
+                return <List.Item>
                     <Row style={
                         {
                             width: "100%"

@@ -6,12 +6,21 @@ import UserPage from '../view/user'
 import AboutPage from '../view/about'
 import UndefinedPage from '../view/404'
 import ApiPage from '../view/api'
+import qs from 'qs'
+
+const types = ['all','good','share','ask','job','dev'];
 
 const routes = [{
     path: '/',
     exact: true,
     render(props) {
-        return <IndexPage {...props} />
+        let {location} = props;
+        let {search} = location;
+        let {tab,page} = qs.parse(search.substr(1));
+        if((tab==undefined&&page==undefined)||(types.includes(tab)&&(page===undefined||page>0))){
+            return <IndexPage {...props} />
+        }
+        return <UndefinedPage />
     }
 }, {
     path: '/topic/:id',
@@ -90,5 +99,6 @@ const indexNavs = [
 export {
     routes,
     navs,
-    indexNavs
+    indexNavs,
+    types
 }

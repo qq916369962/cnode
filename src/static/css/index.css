@@ -8,11 +8,54 @@ h5,
 h6 {
     margin: 0;
 }
-
-.container {
+/* <576px */
+.wrap{
+    margin: 0 5px;
+}
+#footer{
+    padding: 24px 0;
+}
+/* >=576 */
+@media all and (min-width:576px){
+    .wrap{
+        margin: 0 10px;
+    }   
+}
+/* >=768 */
+@media all and (min-width:768px){
+    .wrap{
+        margin: 0 15px;
+    }   
+    .wrap .list{
+        padding: 0 20px;
+    }
+}
+/* >=992 */
+@media all and (min-width:992px){
+    .wrap{
+        margin: 0 20px;
+    }   
+}
+/* >=1200 */
+@media all and (min-width:1200px){
+    .wrap{
+        margin: 0 auto;
+        width: 980px;
+    }   
+    .wrap .list{
+        padding: 0 30px;
+    }
+}
+/* >=1600 */
+@media all and (min-width:1600px){
+    .wrap{
+        width: 1200px;
+    }   
+}
+/* .container {
     margin: 0 auto;
     width: 1200px;
-}
+} */
 
 #logo{
     text-align: center;
@@ -30,4 +73,7 @@ h6 {
 }
 .main{
     background-color: #fff;
+}
+.wrap .list{
+    padding: 0 10px;
 }
